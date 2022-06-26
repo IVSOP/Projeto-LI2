@@ -1,0 +1,1118 @@
+\hypertarget{stackFunc_8c}{}\doxysection{stack\+Func.\+c File Reference}
+\label{stackFunc_8c}\index{stackFunc.c@{stackFunc.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stack\+Func.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+Include dependency graph for stack\+Func.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stackFunc_8c_a29e632a035b9d4c4b6225bb936eb8097}{S\+T\+R\+S\+I\+ZE}}~32
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{stackFunc_8c_ab271be3359b8f86a6f1967dbbc8096d4}{oper\+Handler\+D\+T\+Assign}} (\mbox{\hyperlink{stackFunc_8h_a5e24d06ae8b038c718b3fbf435871e36}{oper\+Handler}} $\ast$handle\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a43ea48e8ccbe53f59c9662c17c50f63e}{stack\+Func\+D\+T\+Assign}} (\mbox{\hyperlink{stackFunc_8h_a8340a15e42b572491b126b462ca4eaa4}{stack\+Func}} $\ast$dist\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{stackFunc_8c_adf962d49c92914a1590c0a2ea328773b}{var\+List\+Assign}} (\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} var\+List)
+\item 
+int \mbox{\hyperlink{stackFunc_8c_aae76bc4035bc27a66e97e8ce084ae353}{get\+Size}} (\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} node)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_abed7ed21e190f151382834fc27595ada}{delete\+Node}} (\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} node)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a61828d6403ac78163126b677752c3ebd}{delete\+Var\+List}} (\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} var\+List)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a6b936d13350902bdad70f1b77960219c}{delete\+Stack}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\begin{DoxyCompactList}\small\item\em Apaga a stack, porém nao faz free do valor dos nodes individualmente. Não apaga a var\+List da stack (senão apagaria o valor das variáveis em nested stacks) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stackFunc_8c_a6ffc1e393758f18fa9d04a220fd1327e}{full\+Delete\+Stack}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} \mbox{\hyperlink{stackFunc_8c_aced0e9e22027ee5045fae68496828a33}{copy\+Array}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+\mbox{\hyperlink{stackFunc_8h_a954198089dd7beaccd65240ecc664c6e}{B\+L\+O\+C\+K\+P\+TR}} \mbox{\hyperlink{stackFunc_8c_af1bf2a5e161a7f4ce8049a83153c384a}{copy\+Block}} (\mbox{\hyperlink{stackFunc_8h_a954198089dd7beaccd65240ecc664c6e}{B\+L\+O\+C\+K\+P\+TR}} block)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a1d98fb370055f2bb22bba574989cf435}{copy\+Node}} (\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} dest, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} src)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_aefb3600bcd81dee362643fc02f4f0695}{copy\+Node\+Push}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} src)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_ad768793e328bb71ec6b878659c48a693}{node\+To\+Int}} (\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} node)
+\item 
+\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} \mbox{\hyperlink{stackFunc_8c_a63844502a44f478ae8848bbadfa95a81}{new\+Stack}} (\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} var\+List)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_afc8ae51bc1e6ab70d3db89302b3acd86}{print\+Int}} (void $\ast$value)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_aed1a4fa5f8c2c3ac7ea208b9c3c4cd21}{print\+Double}} (void $\ast$value)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a75c20f66c2dfe0a40d361f3c17ce2702}{print\+Str}} (void $\ast$value)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_abe499ae2c75158bdba9ba98216629d71}{print\+Block}} (void $\ast$value)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a0c9f7d01e84fad311f8c5765c7afcfcc}{print\+Chr}} (void $\ast$value)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_ae2b6b41ca75d546415449dbff52e5226}{print\+Space}} (int depth)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a9ea0007baa1b8935f544422e181faa06}{debug\+Print\+Var\+List}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ab8f915db65d2eab49d3b76deec81e3f3}{print\+Func}} $\ast$print\+Dist\mbox{[}$\,$\mbox{]}, int depth)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a7dddb0746efc4841ef82d5d33d732cbe}{debug\+Print\+Stack}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ab8f915db65d2eab49d3b76deec81e3f3}{print\+Func}} $\ast$print\+Dist\mbox{[}$\,$\mbox{]}, int depth)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_ab3b8703f7a2b23c6485d709406c37a93}{simple\+Debug\+Print}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ab8f915db65d2eab49d3b76deec81e3f3}{print\+Func}} $\ast$print\+Dist\mbox{[}$\,$\mbox{]}, int depth)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a1e51cd00ed0319cc1ee5f946224dd13f}{simple\+Debug}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a6350f1f7bb4d0f3d5f40c2803937f7c6}{debug}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a4b59dca439ea56540be642e2f8ce7163}{push}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, long double val, \mbox{\hyperlink{stackFunc_8h_a0bc6723d5d4776ab7cdc646728b775f7}{T\+Y\+PE}} t)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a1984e4cebbf13d166deb9accabb7d5cc}{general\+Push}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, void $\ast$ptr, \mbox{\hyperlink{stackFunc_8h_a0bc6723d5d4776ab7cdc646728b775f7}{T\+Y\+PE}} t)
+\item 
+char $\ast$ \mbox{\hyperlink{stackFunc_8c_abe9e951abbeb5a04e5d517e9474fca07}{str\+\_\+rep}} (int n, char $\ast$s)
+\item 
+int \mbox{\hyperlink{stackFunc_8c_a4cd9f5ca531700ec0762983d07ff6064}{get\+Logical\+Value}} (\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} node)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a9abf6d6929354f946a6a410000bfbfe9}{filter\+Array}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} top\+Node, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} snd\+Node)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a6cc0695767e4cbfc67ebf616cef966bf}{filter\+String}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} top\+Node, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} snd\+Node)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a93fc68e3ba31ec45f81b111924a50777}{filter}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} top\+Node, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} snd\+Node)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_abd9d687c3326aad2c5d7eef5e9c8ab02}{pop}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a8766ec90d3ea0f6be9effbc29f20d9d0}{add\+Str}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} top\+Node, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} snd\+Node)
+\begin{DoxyCompactList}\small\item\em concatenaçao string/char no topo da stack \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stackFunc_8c_ac9feee6d65c738453db4b5e35efc5865}{add\+Arr}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} top\+Node, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} snd\+Node)
+\begin{DoxyCompactList}\small\item\em concatenaçao array/número no topo da stack \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stackFunc_8c_a2d96d29fa66ff4f10fb729bf149b2724}{add}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\begin{DoxyCompactList}\small\item\em Soma os dois valores no topo da stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stackFunc_8c_a791242c6970da3c23579c139dd8c1ba1}{sub}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a6e128184bc9d4ad2c32a7293ca86f393}{divis}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a90ca65f788c26db331e566c36035b669}{fold\+Array}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} top\+Node, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} snd\+Node)
+\begin{DoxyCompactList}\small\item\em fold sobre um array usando um bloco \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stackFunc_8c_aac97e59ac0631ba03d6adfd969e5cdb0}{mult}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a6ed6eeb87541d7ea83f9fecd9dd042a2}{map\+Array}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} top\+Node, \mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}} snd\+Node)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a5f1ab16fbcaa7a3529691666e058a4c3}{mod}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_ae01af464d578f28bd55079df6603362d}{expo}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a912655f439326d77cc72070a62aaecec}{inc}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_af4d01414cb93db5361858b01914e485b}{dec}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_aadba67783976d8a8a7e31c69fd1b46ac}{and}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a9ad340b316a5210b3df9da2c935dd195}{or}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_ac1e0657e030cc927b6404c5f993fbe31}{xor}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_adfa1857f6652f3173283a15a55566908}{not}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_abe006a728b235169648e94e85bf900c0}{to\+Char}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_afae78b3dafb8fc72f909f56e0cd49d68}{to\+Double}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_af5908dac21bb9445b68585451621f89c}{to\+Int}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a06bd572bf0e2a96070c1b8fdf03cac0e}{swap\+\_\+top2}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a54554a631a8693b73dda7bce9c5ac0a1}{duplicate}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a99d215f353a7db726086fbb4550077a9}{rotate\+\_\+top3}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a8bfe02404808a432f4680d22eaac83de}{insere}} (long double x, \mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}} arr, int N)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a678d18f4e14fcde8fe9dc27f123269d8}{insere\+String}} (char $\ast$x, \mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}} arr, int N)
+\item 
+\mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}} \mbox{\hyperlink{stackFunc_8c_a02e50fb5f88de4642583f79c33ad326a}{make\+List}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} new\+Array)
+\item 
+\mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}} \mbox{\hyperlink{stackFunc_8c_a502ebd4145e340a070b708a479d71d0b}{get\+Array\+Values}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} new\+Array, \mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} arr, \mbox{\hyperlink{stackFunc_8h_a954198089dd7beaccd65240ecc664c6e}{B\+L\+O\+C\+K\+P\+TR}} block)
+\item 
+\mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}} \mbox{\hyperlink{stackFunc_8c_afef6c75d44713710b8d89cb047172d86}{get\+String\+Values}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} new\+Array, char $\ast$str, \mbox{\hyperlink{stackFunc_8h_a954198089dd7beaccd65240ecc664c6e}{B\+L\+O\+C\+K\+P\+TR}} block)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a3dcff856a38c8165a86ce7a8971c45c7}{copy\+\_\+nth}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a89318633beaeb62b39ee0520b0b7f5e1}{readl}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_acb0e45e62bc2d60a8c78da8d8230c335}{is\+Equal}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a5826ca45ad612144b0379eda67a7da49}{is\+Greater}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_aa0e705c7bc75161cf8566f0dd4a160b9}{is\+Lesser}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a57ccfcb90ea04ff34d7191e07bca8b95}{negate}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a05485629e38d8aa195ffc330e3a6c252}{If\+Then\+Else}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a59afe69c42021b2ad8764c11f5db87a0}{top2\+Greater}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a1fb7764a7480eef414485da0eccef5df}{top2\+Lower}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_ac2f5d16ce80932383c77f549454ae6ea}{top2\+Or}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a175866cc337eac91cf3176dcf36adf3c}{top2\+And}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a239c1ab8107faf7147b46046f3faac37}{range}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a15d6c402c1b81c245b8cc8b3d2f30bc8}{white\+Spacer}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a2d4e48dc3619d7e6fcc8285d765d6fd0}{new\+Line\+Spacer}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_af5042226af6b58498525457ae3ba1252}{read\+All}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_af62485694807b638d93f5111c8fda655}{executew}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a12cc9bb168202b412e1da37f6d0e58a8}{to\+String}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\item 
+void \mbox{\hyperlink{stackFunc_8c_a8942e775848eda2c314d686fecc6df1b}{print\+Top}} (\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} stack)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stackFunc_8c_a29e632a035b9d4c4b6225bb936eb8097}\label{stackFunc_8c_a29e632a035b9d4c4b6225bb936eb8097}} 
+\index{stackFunc.c@{stackFunc.c}!STRSIZE@{STRSIZE}}
+\index{STRSIZE@{STRSIZE}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{STRSIZE}{STRSIZE}}
+{\footnotesize\ttfamily \#define S\+T\+R\+S\+I\+ZE~32}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{stackFunc_8c_a2d96d29fa66ff4f10fb729bf149b2724}\label{stackFunc_8c_a2d96d29fa66ff4f10fb729bf149b2724}} 
+\index{stackFunc.c@{stackFunc.c}!add@{add}}
+\index{add@{add}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+
+
+Soma os dois valores no topo da stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & a utilizar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_ac9feee6d65c738453db4b5e35efc5865}\label{stackFunc_8c_ac9feee6d65c738453db4b5e35efc5865}} 
+\index{stackFunc.c@{stackFunc.c}!addArr@{addArr}}
+\index{addArr@{addArr}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{addArr()}{addArr()}}
+{\footnotesize\ttfamily void add\+Arr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{top\+Node,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{snd\+Node }\end{DoxyParamCaption})}
+
+
+
+concatenaçao array/número no topo da stack 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & a utilizar \\
+\hline
+{\em top\+Node} & \\
+\hline
+{\em snd\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a8766ec90d3ea0f6be9effbc29f20d9d0}\label{stackFunc_8c_a8766ec90d3ea0f6be9effbc29f20d9d0}} 
+\index{stackFunc.c@{stackFunc.c}!addStr@{addStr}}
+\index{addStr@{addStr}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{addStr()}{addStr()}}
+{\footnotesize\ttfamily void add\+Str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{top\+Node,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{snd\+Node }\end{DoxyParamCaption})}
+
+
+
+concatenaçao string/char no topo da stack 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & a utilizar \\
+\hline
+{\em top\+Node} & \\
+\hline
+{\em snd\+Node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_aadba67783976d8a8a7e31c69fd1b46ac}\label{stackFunc_8c_aadba67783976d8a8a7e31c69fd1b46ac}} 
+\index{stackFunc.c@{stackFunc.c}!and@{and}}
+\index{and@{and}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{and()}{and()}}
+{\footnotesize\ttfamily void and (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Bitwise and entre 2 valores no topo da stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a3dcff856a38c8165a86ce7a8971c45c7}\label{stackFunc_8c_a3dcff856a38c8165a86ce7a8971c45c7}} 
+\index{stackFunc.c@{stackFunc.c}!copy\_nth@{copy\_nth}}
+\index{copy\_nth@{copy\_nth}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{copy\_nth()}{copy\_nth()}}
+{\footnotesize\ttfamily void copy\+\_\+nth (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Copia o n-\/ésimo elemento da stack e coloca-\/o no topo 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_aced0e9e22027ee5045fae68496828a33}\label{stackFunc_8c_aced0e9e22027ee5045fae68496828a33}} 
+\index{stackFunc.c@{stackFunc.c}!copyArray@{copyArray}}
+\index{copyArray@{copyArray}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{copyArray()}{copyArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} copy\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Copia uma stack (array) 
+\begin{DoxyParams}{Parameters}
+{\em stack} & (array) que queremos copiar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stack nova 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_af1bf2a5e161a7f4ce8049a83153c384a}\label{stackFunc_8c_af1bf2a5e161a7f4ce8049a83153c384a}} 
+\index{stackFunc.c@{stackFunc.c}!copyBlock@{copyBlock}}
+\index{copyBlock@{copyBlock}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{copyBlock()}{copyBlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stackFunc_8h_a954198089dd7beaccd65240ecc664c6e}{B\+L\+O\+C\+K\+P\+TR}} copy\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a954198089dd7beaccd65240ecc664c6e}{B\+L\+O\+C\+K\+P\+TR}}}]{block }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a1d98fb370055f2bb22bba574989cf435}\label{stackFunc_8c_a1d98fb370055f2bb22bba574989cf435}} 
+\index{stackFunc.c@{stackFunc.c}!copyNode@{copyNode}}
+\index{copyNode@{copyNode}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{copyNode()}{copyNode()}}
+{\footnotesize\ttfamily void copy\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{dest,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{src }\end{DoxyParamCaption})}
+
+Copia o N\+O\+DE src para dest. {\bfseries{Assume que dest-\/$>$value tinha informação e faz free}} 
+\begin{DoxyParams}{Parameters}
+{\em dest} & N\+O\+DE de destino \\
+\hline
+{\em src} & N\+O\+DE de origem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_aefb3600bcd81dee362643fc02f4f0695}\label{stackFunc_8c_aefb3600bcd81dee362643fc02f4f0695}} 
+\index{stackFunc.c@{stackFunc.c}!copyNodePush@{copyNodePush}}
+\index{copyNodePush@{copyNodePush}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{copyNodePush()}{copyNodePush()}}
+{\footnotesize\ttfamily void copy\+Node\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{src }\end{DoxyParamCaption})}
+
+Copia src para o topo da stack, fazendo push 
+\begin{DoxyParams}{Parameters}
+{\em stack} & para a qual fazer push \\
+\hline
+{\em src} & N\+O\+DE para copiar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a6350f1f7bb4d0f3d5f40c2803937f7c6}\label{stackFunc_8c_a6350f1f7bb4d0f3d5f40c2803937f7c6}} 
+\index{stackFunc.c@{stackFunc.c}!debug@{debug}}
+\index{debug@{debug}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily void debug (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Faz debug da stack, chamando \mbox{\hyperlink{stackFunc_8c_a7dddb0746efc4841ef82d5d33d732cbe}{debug\+Print\+Stack()}} 
+\begin{DoxyParams}{Parameters}
+{\em stack} & para a qual fazer debug \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a7dddb0746efc4841ef82d5d33d732cbe}\label{stackFunc_8c_a7dddb0746efc4841ef82d5d33d732cbe}} 
+\index{stackFunc.c@{stackFunc.c}!debugPrintStack@{debugPrintStack}}
+\index{debugPrintStack@{debugPrintStack}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{debugPrintStack()}{debugPrintStack()}}
+{\footnotesize\ttfamily void debug\+Print\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ab8f915db65d2eab49d3b76deec81e3f3}{print\+Func}} $\ast$}]{print\+Dist\mbox{[}$\,$\mbox{]},  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+Faz print da stack, indicando tipos, valores, inicio e fim de arrays, var\+List, etc. 
+\begin{DoxyParams}{Parameters}
+{\em stack} & para dar print \\
+\hline
+{\em print\+Dist} & dispatch table de funções de print \\
+\hline
+{\em depth} & para tornar legíveis nested arrays \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a9ea0007baa1b8935f544422e181faa06}\label{stackFunc_8c_a9ea0007baa1b8935f544422e181faa06}} 
+\index{stackFunc.c@{stackFunc.c}!debugPrintVarList@{debugPrintVarList}}
+\index{debugPrintVarList@{debugPrintVarList}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{debugPrintVarList()}{debugPrintVarList()}}
+{\footnotesize\ttfamily void debug\+Print\+Var\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ab8f915db65d2eab49d3b76deec81e3f3}{print\+Func}} $\ast$}]{print\+Dist\mbox{[}$\,$\mbox{]},  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_af4d01414cb93db5361858b01914e485b}\label{stackFunc_8c_af4d01414cb93db5361858b01914e485b}} 
+\index{stackFunc.c@{stackFunc.c}!dec@{dec}}
+\index{dec@{dec}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{dec()}{dec()}}
+{\footnotesize\ttfamily void dec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Decrementa número no topo da stack/remove primeiro elemento de array ou string e coloca após o mesmo 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_abed7ed21e190f151382834fc27595ada}\label{stackFunc_8c_abed7ed21e190f151382834fc27595ada}} 
+\index{stackFunc.c@{stackFunc.c}!deleteNode@{deleteNode}}
+\index{deleteNode@{deleteNode}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{deleteNode()}{deleteNode()}}
+{\footnotesize\ttfamily void delete\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{node }\end{DoxyParamCaption})}
+
+Faz free do valor do node 
+\begin{DoxyParams}{Parameters}
+{\em node} & que se pretende apagar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a6b936d13350902bdad70f1b77960219c}\label{stackFunc_8c_a6b936d13350902bdad70f1b77960219c}} 
+\index{stackFunc.c@{stackFunc.c}!deleteStack@{deleteStack}}
+\index{deleteStack@{deleteStack}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{deleteStack()}{deleteStack()}}
+{\footnotesize\ttfamily void delete\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+
+
+Apaga a stack, porém nao faz free do valor dos nodes individualmente. Não apaga a var\+List da stack (senão apagaria o valor das variáveis em nested stacks) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & que se pretende apagar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a61828d6403ac78163126b677752c3ebd}\label{stackFunc_8c_a61828d6403ac78163126b677752c3ebd}} 
+\index{stackFunc.c@{stackFunc.c}!deleteVarList@{deleteVarList}}
+\index{deleteVarList@{deleteVarList}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{deleteVarList()}{deleteVarList()}}
+{\footnotesize\ttfamily void delete\+Var\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{var\+List }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & cujas variáveis se pretendem apagar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void Apaga a var\+List da stack, e os valores associados a cada variável 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a6e128184bc9d4ad2c32a7293ca86f393}\label{stackFunc_8c_a6e128184bc9d4ad2c32a7293ca86f393}} 
+\index{stackFunc.c@{stackFunc.c}!divis@{divis}}
+\index{divis@{divis}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{divis()}{divis()}}
+{\footnotesize\ttfamily void divis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a54554a631a8693b73dda7bce9c5ac0a1}\label{stackFunc_8c_a54554a631a8693b73dda7bce9c5ac0a1}} 
+\index{stackFunc.c@{stackFunc.c}!duplicate@{duplicate}}
+\index{duplicate@{duplicate}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{duplicate()}{duplicate()}}
+{\footnotesize\ttfamily void duplicate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Duplica o elemento do topo da stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_af62485694807b638d93f5111c8fda655}\label{stackFunc_8c_af62485694807b638d93f5111c8fda655}} 
+\index{stackFunc.c@{stackFunc.c}!executew@{executew}}
+\index{executew@{executew}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{executew()}{executew()}}
+{\footnotesize\ttfamily void executew (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_ae01af464d578f28bd55079df6603362d}\label{stackFunc_8c_ae01af464d578f28bd55079df6603362d}} 
+\index{stackFunc.c@{stackFunc.c}!expo@{expo}}
+\index{expo@{expo}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{expo()}{expo()}}
+{\footnotesize\ttfamily void expo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Devolve o resultado da exponenciação do 2º valor da stack pelo 1º (a contar do topo) 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a93fc68e3ba31ec45f81b111924a50777}\label{stackFunc_8c_a93fc68e3ba31ec45f81b111924a50777}} 
+\index{stackFunc.c@{stackFunc.c}!filter@{filter}}
+\index{filter@{filter}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily void filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{top\+Node,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{snd\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a9abf6d6929354f946a6a410000bfbfe9}\label{stackFunc_8c_a9abf6d6929354f946a6a410000bfbfe9}} 
+\index{stackFunc.c@{stackFunc.c}!filterArray@{filterArray}}
+\index{filterArray@{filterArray}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{filterArray()}{filterArray()}}
+{\footnotesize\ttfamily void filter\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{top\+Node,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{snd\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a6cc0695767e4cbfc67ebf616cef966bf}\label{stackFunc_8c_a6cc0695767e4cbfc67ebf616cef966bf}} 
+\index{stackFunc.c@{stackFunc.c}!filterString@{filterString}}
+\index{filterString@{filterString}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{filterString()}{filterString()}}
+{\footnotesize\ttfamily void filter\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{top\+Node,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{snd\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a90ca65f788c26db331e566c36035b669}\label{stackFunc_8c_a90ca65f788c26db331e566c36035b669}} 
+\index{stackFunc.c@{stackFunc.c}!foldArray@{foldArray}}
+\index{foldArray@{foldArray}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{foldArray()}{foldArray()}}
+{\footnotesize\ttfamily void fold\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{top\+Node,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{snd\+Node }\end{DoxyParamCaption})}
+
+
+
+fold sobre um array usando um bloco 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a6ffc1e393758f18fa9d04a220fd1327e}\label{stackFunc_8c_a6ffc1e393758f18fa9d04a220fd1327e}} 
+\index{stackFunc.c@{stackFunc.c}!fullDeleteStack@{fullDeleteStack}}
+\index{fullDeleteStack@{fullDeleteStack}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{fullDeleteStack()}{fullDeleteStack()}}
+{\footnotesize\ttfamily void full\+Delete\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & que se pretende apagar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void Apaga a stack, incluindo o valor dos nodes individualmente. Apaga a var\+List da stack. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a1984e4cebbf13d166deb9accabb7d5cc}\label{stackFunc_8c_a1984e4cebbf13d166deb9accabb7d5cc}} 
+\index{stackFunc.c@{stackFunc.c}!generalPush@{generalPush}}
+\index{generalPush@{generalPush}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{generalPush()}{generalPush()}}
+{\footnotesize\ttfamily void general\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{stackFunc_8h_a0bc6723d5d4776ab7cdc646728b775f7}{T\+Y\+PE}}}]{t }\end{DoxyParamCaption})}
+
+Semelhante a \mbox{\hyperlink{stackFunc_8c_a4b59dca439ea56540be642e2f8ce7163}{push()}}, mas o valor é um void$\ast$ e não long double 
+\begin{DoxyParams}{Parameters}
+{\em stack} & para a qual dar push \\
+\hline
+{\em ptr} & void$\ast$ que será o valor usado (é usado o pointer, não o seu valor) \\
+\hline
+{\em t} & T\+Y\+PE para o qual dar assign do node novo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a502ebd4145e340a070b708a479d71d0b}\label{stackFunc_8c_a502ebd4145e340a070b708a479d71d0b}} 
+\index{stackFunc.c@{stackFunc.c}!getArrayValues@{getArrayValues}}
+\index{getArrayValues@{getArrayValues}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{getArrayValues()}{getArrayValues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}} get\+Array\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{new\+Array,  }\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{arr,  }\item[{\mbox{\hyperlink{stackFunc_8h_a954198089dd7beaccd65240ecc664c6e}{B\+L\+O\+C\+K\+P\+TR}}}]{block }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a4cd9f5ca531700ec0762983d07ff6064}\label{stackFunc_8c_a4cd9f5ca531700ec0762983d07ff6064}} 
+\index{stackFunc.c@{stackFunc.c}!getLogicalValue@{getLogicalValue}}
+\index{getLogicalValue@{getLogicalValue}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{getLogicalValue()}{getLogicalValue()}}
+{\footnotesize\ttfamily int get\+Logical\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_aae76bc4035bc27a66e97e8ce084ae353}\label{stackFunc_8c_aae76bc4035bc27a66e97e8ce084ae353}} 
+\index{stackFunc.c@{stackFunc.c}!getSize@{getSize}}
+\index{getSize@{getSize}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int get\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{node }\end{DoxyParamCaption})}
+
+Retorna tamanho de um objeto usado pela stack (já em bytes) Nota\+: para arrays retorna size, não sp 
+\begin{DoxyParams}{Parameters}
+{\em node} & do qual queremos saber o tamanho {\bfseries{do seu valor}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tamanho em bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_afef6c75d44713710b8d89cb047172d86}\label{stackFunc_8c_afef6c75d44713710b8d89cb047172d86}} 
+\index{stackFunc.c@{stackFunc.c}!getStringValues@{getStringValues}}
+\index{getStringValues@{getStringValues}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{getStringValues()}{getStringValues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}} get\+String\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{new\+Array,  }\item[{char $\ast$}]{str,  }\item[{\mbox{\hyperlink{stackFunc_8h_a954198089dd7beaccd65240ecc664c6e}{B\+L\+O\+C\+K\+P\+TR}}}]{block }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a05485629e38d8aa195ffc330e3a6c252}\label{stackFunc_8c_a05485629e38d8aa195ffc330e3a6c252}} 
+\index{stackFunc.c@{stackFunc.c}!IfThenElse@{IfThenElse}}
+\index{IfThenElse@{IfThenElse}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{IfThenElse()}{IfThenElse()}}
+{\footnotesize\ttfamily void If\+Then\+Else (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a912655f439326d77cc72070a62aaecec}\label{stackFunc_8c_a912655f439326d77cc72070a62aaecec}} 
+\index{stackFunc.c@{stackFunc.c}!inc@{inc}}
+\index{inc@{inc}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{inc()}{inc()}}
+{\footnotesize\ttfamily void inc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Incrementa número no topo da stack/remove último elemento de array ou string e coloca após o mesmo 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a8bfe02404808a432f4680d22eaac83de}\label{stackFunc_8c_a8bfe02404808a432f4680d22eaac83de}} 
+\index{stackFunc.c@{stackFunc.c}!insere@{insere}}
+\index{insere@{insere}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{insere()}{insere()}}
+{\footnotesize\ttfamily void insere (\begin{DoxyParamCaption}\item[{long double}]{x,  }\item[{\mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}}}]{arr,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a678d18f4e14fcde8fe9dc27f123269d8}\label{stackFunc_8c_a678d18f4e14fcde8fe9dc27f123269d8}} 
+\index{stackFunc.c@{stackFunc.c}!insereString@{insereString}}
+\index{insereString@{insereString}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{insereString()}{insereString()}}
+{\footnotesize\ttfamily void insere\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{x,  }\item[{\mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}}}]{arr,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_acb0e45e62bc2d60a8c78da8d8230c335}\label{stackFunc_8c_acb0e45e62bc2d60a8c78da8d8230c335}} 
+\index{stackFunc.c@{stackFunc.c}!isEqual@{isEqual}}
+\index{isEqual@{isEqual}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{isEqual()}{isEqual()}}
+{\footnotesize\ttfamily void is\+Equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Efetua operação de igualdade entre 2 valores no topo da stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a5826ca45ad612144b0379eda67a7da49}\label{stackFunc_8c_a5826ca45ad612144b0379eda67a7da49}} 
+\index{stackFunc.c@{stackFunc.c}!isGreater@{isGreater}}
+\index{isGreater@{isGreater}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{isGreater()}{isGreater()}}
+{\footnotesize\ttfamily void is\+Greater (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_aa0e705c7bc75161cf8566f0dd4a160b9}\label{stackFunc_8c_aa0e705c7bc75161cf8566f0dd4a160b9}} 
+\index{stackFunc.c@{stackFunc.c}!isLesser@{isLesser}}
+\index{isLesser@{isLesser}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{isLesser()}{isLesser()}}
+{\footnotesize\ttfamily void is\+Lesser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a02e50fb5f88de4642583f79c33ad326a}\label{stackFunc_8c_a02e50fb5f88de4642583f79c33ad326a}} 
+\index{stackFunc.c@{stackFunc.c}!makeList@{makeList}}
+\index{makeList@{makeList}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{makeList()}{makeList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stackFunc_8h_a2af10a0bc129581fd68c08870c301318}{temp\+Organizer}} make\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{new\+Array }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a6ed6eeb87541d7ea83f9fecd9dd042a2}\label{stackFunc_8c_a6ed6eeb87541d7ea83f9fecd9dd042a2}} 
+\index{stackFunc.c@{stackFunc.c}!mapArray@{mapArray}}
+\index{mapArray@{mapArray}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{mapArray()}{mapArray()}}
+{\footnotesize\ttfamily void map\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{top\+Node,  }\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{snd\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a5f1ab16fbcaa7a3529691666e058a4c3}\label{stackFunc_8c_a5f1ab16fbcaa7a3529691666e058a4c3}} 
+\index{stackFunc.c@{stackFunc.c}!mod@{mod}}
+\index{mod@{mod}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{mod()}{mod()}}
+{\footnotesize\ttfamily void mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Devolve o resto da divisão dos 2 valores no topo da stack, ou executa um map sobre um array usando o bloco 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_aac97e59ac0631ba03d6adfd969e5cdb0}\label{stackFunc_8c_aac97e59ac0631ba03d6adfd969e5cdb0}} 
+\index{stackFunc.c@{stackFunc.c}!mult@{mult}}
+\index{mult@{mult}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{mult()}{mult()}}
+{\footnotesize\ttfamily void mult (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a57ccfcb90ea04ff34d7191e07bca8b95}\label{stackFunc_8c_a57ccfcb90ea04ff34d7191e07bca8b95}} 
+\index{stackFunc.c@{stackFunc.c}!negate@{negate}}
+\index{negate@{negate}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{negate()}{negate()}}
+{\footnotesize\ttfamily void negate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Negar número inteiro/ coloacar na stack todos os elementos de um array 
+\begin{DoxyParams}{Parameters}
+{\em stack} & a stack onde executar a operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a2d4e48dc3619d7e6fcc8285d765d6fd0}\label{stackFunc_8c_a2d4e48dc3619d7e6fcc8285d765d6fd0}} 
+\index{stackFunc.c@{stackFunc.c}!newLineSpacer@{newLineSpacer}}
+\index{newLineSpacer@{newLineSpacer}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{newLineSpacer()}{newLineSpacer()}}
+{\footnotesize\ttfamily void new\+Line\+Spacer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a63844502a44f478ae8848bbadfa95a81}\label{stackFunc_8c_a63844502a44f478ae8848bbadfa95a81}} 
+\index{stackFunc.c@{stackFunc.c}!newStack@{newStack}}
+\index{newStack@{newStack}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{newStack()}{newStack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}} new\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{var\+List }\end{DoxyParamCaption})}
+
+Cria uma nova stack vazia 
+\begin{DoxyParams}{Parameters}
+{\em nada} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+CK nova criada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_ad768793e328bb71ec6b878659c48a693}\label{stackFunc_8c_ad768793e328bb71ec6b878659c48a693}} 
+\index{stackFunc.c@{stackFunc.c}!nodeToInt@{nodeToInt}}
+\index{nodeToInt@{nodeToInt}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{nodeToInt()}{nodeToInt()}}
+{\footnotesize\ttfamily void node\+To\+Int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{node }\end{DoxyParamCaption})}
+
+Transforma node para o tipo int. Altera o seu tipo e trunca o resultado, se necessário 
+\begin{DoxyParams}{Parameters}
+{\em node} & N\+O\+DE a transformar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_adfa1857f6652f3173283a15a55566908}\label{stackFunc_8c_adfa1857f6652f3173283a15a55566908}} 
+\index{stackFunc.c@{stackFunc.c}!not@{not}}
+\index{not@{not}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{not()}{not()}}
+{\footnotesize\ttfamily void not (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Bitwise not ao topo da stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_ab271be3359b8f86a6f1967dbbc8096d4}\label{stackFunc_8c_ab271be3359b8f86a6f1967dbbc8096d4}} 
+\index{stackFunc.c@{stackFunc.c}!operHandlerDTAssign@{operHandlerDTAssign}}
+\index{operHandlerDTAssign@{operHandlerDTAssign}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{operHandlerDTAssign()}{operHandlerDTAssign()}}
+{\footnotesize\ttfamily void oper\+Handler\+D\+T\+Assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a5e24d06ae8b038c718b3fbf435871e36}{oper\+Handler}} $\ast$}]{handle\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Função que associa cada valor ascii de um caratér à respetiva função da stack 
+\begin{DoxyParams}{Parameters}
+{\em array} & de pointers para as várias stack\+Funcs, pointer do pointer para a string de input (a ser lida) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a9ad340b316a5210b3df9da2c935dd195}\label{stackFunc_8c_a9ad340b316a5210b3df9da2c935dd195}} 
+\index{stackFunc.c@{stackFunc.c}!or@{or}}
+\index{or@{or}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{or()}{or()}}
+{\footnotesize\ttfamily void or (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Bitwise or entre 2 valores no topo da stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_abd9d687c3326aad2c5d7eef5e9c8ab02}\label{stackFunc_8c_abd9d687c3326aad2c5d7eef5e9c8ab02}} 
+\index{stackFunc.c@{stackFunc.c}!pop@{pop}}
+\index{pop@{pop}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Faz pop do elemento no topo da stack. Decrementa sp e chama \mbox{\hyperlink{stackFunc_8c_abed7ed21e190f151382834fc27595ada}{delete\+Node()}} 
+\begin{DoxyParams}{Parameters}
+{\em stack} & para a qual dar pop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_abe499ae2c75158bdba9ba98216629d71}\label{stackFunc_8c_abe499ae2c75158bdba9ba98216629d71}} 
+\index{stackFunc.c@{stackFunc.c}!printBlock@{printBlock}}
+\index{printBlock@{printBlock}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{printBlock()}{printBlock()}}
+{\footnotesize\ttfamily void print\+Block (\begin{DoxyParamCaption}\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+Print de block, acrescenta parêntesis fora da string guardada 
+\begin{DoxyParams}{Parameters}
+{\em value} & void$\ast$ que contém a string do bloco (sem as chavetas) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a0c9f7d01e84fad311f8c5765c7afcfcc}\label{stackFunc_8c_a0c9f7d01e84fad311f8c5765c7afcfcc}} 
+\index{stackFunc.c@{stackFunc.c}!printChr@{printChr}}
+\index{printChr@{printChr}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{printChr()}{printChr()}}
+{\footnotesize\ttfamily void print\+Chr (\begin{DoxyParamCaption}\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+Print de char 
+\begin{DoxyParams}{Parameters}
+{\em value} & void$\ast$ que o contém \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_aed1a4fa5f8c2c3ac7ea208b9c3c4cd21}\label{stackFunc_8c_aed1a4fa5f8c2c3ac7ea208b9c3c4cd21}} 
+\index{stackFunc.c@{stackFunc.c}!printDouble@{printDouble}}
+\index{printDouble@{printDouble}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{printDouble()}{printDouble()}}
+{\footnotesize\ttfamily void print\+Double (\begin{DoxyParamCaption}\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+Print de valores long double 
+\begin{DoxyParams}{Parameters}
+{\em value} & void$\ast$ que contém o valor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_afc8ae51bc1e6ab70d3db89302b3acd86}\label{stackFunc_8c_afc8ae51bc1e6ab70d3db89302b3acd86}} 
+\index{stackFunc.c@{stackFunc.c}!printInt@{printInt}}
+\index{printInt@{printInt}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{printInt()}{printInt()}}
+{\footnotesize\ttfamily void print\+Int (\begin{DoxyParamCaption}\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+Print de valores inteiros 
+\begin{DoxyParams}{Parameters}
+{\em value} & void$\ast$ que contém o valor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_ae2b6b41ca75d546415449dbff52e5226}\label{stackFunc_8c_ae2b6b41ca75d546415449dbff52e5226}} 
+\index{stackFunc.c@{stackFunc.c}!printSpace@{printSpace}}
+\index{printSpace@{printSpace}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{printSpace()}{printSpace()}}
+{\footnotesize\ttfamily void print\+Space (\begin{DoxyParamCaption}\item[{int}]{depth }\end{DoxyParamCaption})}
+
+Usada pela debug\+Print\+Stack para tornar debug de arrays mais legível 
+\begin{DoxyParams}{Parameters}
+{\em depth} & indica o número de espaços consoante a \char`\"{}profundidade\char`\"{} do array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a75c20f66c2dfe0a40d361f3c17ce2702}\label{stackFunc_8c_a75c20f66c2dfe0a40d361f3c17ce2702}} 
+\index{stackFunc.c@{stackFunc.c}!printStr@{printStr}}
+\index{printStr@{printStr}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{printStr()}{printStr()}}
+{\footnotesize\ttfamily void print\+Str (\begin{DoxyParamCaption}\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+Print de string 
+\begin{DoxyParams}{Parameters}
+{\em value} & void$\ast$ que contém a string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a8942e775848eda2c314d686fecc6df1b}\label{stackFunc_8c_a8942e775848eda2c314d686fecc6df1b}} 
+\index{stackFunc.c@{stackFunc.c}!printTop@{printTop}}
+\index{printTop@{printTop}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{printTop()}{printTop()}}
+{\footnotesize\ttfamily void print\+Top (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a4b59dca439ea56540be642e2f8ce7163}\label{stackFunc_8c_a4b59dca439ea56540be642e2f8ce7163}} 
+\index{stackFunc.c@{stackFunc.c}!push@{push}}
+\index{push@{push}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{long double}]{val,  }\item[{\mbox{\hyperlink{stackFunc_8h_a0bc6723d5d4776ab7cdc646728b775f7}{T\+Y\+PE}}}]{t }\end{DoxyParamCaption})}
+
+Faz push para a stack de um long double. Incrementa stack pointer 
+\begin{DoxyParams}{Parameters}
+{\em stack} & para a qual dar push \\
+\hline
+{\em val} & long double a ser usada \\
+\hline
+{\em t} & T\+Y\+PE para o qual dar assign do node novo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a239c1ab8107faf7147b46046f3faac37}\label{stackFunc_8c_a239c1ab8107faf7147b46046f3faac37}} 
+\index{stackFunc.c@{stackFunc.c}!range@{range}}
+\index{range@{range}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}}
+{\footnotesize\ttfamily void range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_af5042226af6b58498525457ae3ba1252}\label{stackFunc_8c_af5042226af6b58498525457ae3ba1252}} 
+\index{stackFunc.c@{stackFunc.c}!readAll@{readAll}}
+\index{readAll@{readAll}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{readAll()}{readAll()}}
+{\footnotesize\ttfamily void read\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a89318633beaeb62b39ee0520b0b7f5e1}\label{stackFunc_8c_a89318633beaeb62b39ee0520b0b7f5e1}} 
+\index{stackFunc.c@{stackFunc.c}!readl@{readl}}
+\index{readl@{readl}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{readl()}{readl()}}
+{\footnotesize\ttfamily void readl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Lê uma linha de input e coloca no topo da stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a99d215f353a7db726086fbb4550077a9}\label{stackFunc_8c_a99d215f353a7db726086fbb4550077a9}} 
+\index{stackFunc.c@{stackFunc.c}!rotate\_top3@{rotate\_top3}}
+\index{rotate\_top3@{rotate\_top3}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{rotate\_top3()}{rotate\_top3()}}
+{\footnotesize\ttfamily void rotate\+\_\+top3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Roda os três elementos do topo da stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a1e51cd00ed0319cc1ee5f946224dd13f}\label{stackFunc_8c_a1e51cd00ed0319cc1ee5f946224dd13f}} 
+\index{stackFunc.c@{stackFunc.c}!simpleDebug@{simpleDebug}}
+\index{simpleDebug@{simpleDebug}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{simpleDebug()}{simpleDebug()}}
+{\footnotesize\ttfamily void simple\+Debug (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Faz debug da stack, chamando \mbox{\hyperlink{stackFunc_8c_ab3b8703f7a2b23c6485d709406c37a93}{simple\+Debug\+Print()}} 
+\begin{DoxyParams}{Parameters}
+{\em stack} & para a qual fazer debug \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_ab3b8703f7a2b23c6485d709406c37a93}\label{stackFunc_8c_ab3b8703f7a2b23c6485d709406c37a93}} 
+\index{stackFunc.c@{stackFunc.c}!simpleDebugPrint@{simpleDebugPrint}}
+\index{simpleDebugPrint@{simpleDebugPrint}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{simpleDebugPrint()}{simpleDebugPrint()}}
+{\footnotesize\ttfamily void simple\+Debug\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack,  }\item[{\mbox{\hyperlink{stackFunc_8h_ab8f915db65d2eab49d3b76deec81e3f3}{print\+Func}} $\ast$}]{print\+Dist\mbox{[}$\,$\mbox{]},  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+Semelhante a \mbox{\hyperlink{stackFunc_8c_a7dddb0746efc4841ef82d5d33d732cbe}{debug\+Print\+Stack()}}, mas não indica a var\+List 
+\begin{DoxyParams}{Parameters}
+{\em stack} & para dar print \\
+\hline
+{\em print\+Dist} & dispatch table de funções de print \\
+\hline
+{\em depth} & para tornar legíveis nested arrays \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a43ea48e8ccbe53f59c9662c17c50f63e}\label{stackFunc_8c_a43ea48e8ccbe53f59c9662c17c50f63e}} 
+\index{stackFunc.c@{stackFunc.c}!stackFuncDTAssign@{stackFuncDTAssign}}
+\index{stackFuncDTAssign@{stackFuncDTAssign}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{stackFuncDTAssign()}{stackFuncDTAssign()}}
+{\footnotesize\ttfamily void stack\+Func\+D\+T\+Assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a8340a15e42b572491b126b462ca4eaa4}{stack\+Func}} $\ast$}]{dist\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Função que associa cada valor ascii de um caratér à respetiva função da stack 
+\begin{DoxyParams}{Parameters}
+{\em array} & de pointers para as várias stack\+Funcs, pointer do pointer para a string de input (a ser lida) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_abe9e951abbeb5a04e5d517e9474fca07}\label{stackFunc_8c_abe9e951abbeb5a04e5d517e9474fca07}} 
+\index{stackFunc.c@{stackFunc.c}!str\_rep@{str\_rep}}
+\index{str\_rep@{str\_rep}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{str\_rep()}{str\_rep()}}
+{\footnotesize\ttfamily char$\ast$ str\+\_\+rep (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a791242c6970da3c23579c139dd8c1ba1}\label{stackFunc_8c_a791242c6970da3c23579c139dd8c1ba1}} 
+\index{stackFunc.c@{stackFunc.c}!sub@{sub}}
+\index{sub@{sub}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{sub()}{sub()}}
+{\footnotesize\ttfamily void sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_a06bd572bf0e2a96070c1b8fdf03cac0e}\label{stackFunc_8c_a06bd572bf0e2a96070c1b8fdf03cac0e}} 
+\index{stackFunc.c@{stackFunc.c}!swap\_top2@{swap\_top2}}
+\index{swap\_top2@{swap\_top2}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{swap\_top2()}{swap\_top2()}}
+{\footnotesize\ttfamily void swap\+\_\+top2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Troca os dois elementos do topo da stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_abe006a728b235169648e94e85bf900c0}\label{stackFunc_8c_abe006a728b235169648e94e85bf900c0}} 
+\index{stackFunc.c@{stackFunc.c}!toChar@{toChar}}
+\index{toChar@{toChar}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{toChar()}{toChar()}}
+{\footnotesize\ttfamily void to\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Passa topo da stack para char 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_afae78b3dafb8fc72f909f56e0cd49d68}\label{stackFunc_8c_afae78b3dafb8fc72f909f56e0cd49d68}} 
+\index{stackFunc.c@{stackFunc.c}!toDouble@{toDouble}}
+\index{toDouble@{toDouble}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{toDouble()}{toDouble()}}
+{\footnotesize\ttfamily void to\+Double (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Passa topo da stack para long double 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_af5908dac21bb9445b68585451621f89c}\label{stackFunc_8c_af5908dac21bb9445b68585451621f89c}} 
+\index{stackFunc.c@{stackFunc.c}!toInt@{toInt}}
+\index{toInt@{toInt}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{toInt()}{toInt()}}
+{\footnotesize\ttfamily void to\+Int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Passa topo da stack para int, chamando \mbox{\hyperlink{stackFunc_8c_ad768793e328bb71ec6b878659c48a693}{node\+To\+Int()}} (para truncar resultado) 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a175866cc337eac91cf3176dcf36adf3c}\label{stackFunc_8c_a175866cc337eac91cf3176dcf36adf3c}} 
+\index{stackFunc.c@{stackFunc.c}!top2And@{top2And}}
+\index{top2And@{top2And}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{top2And()}{top2And()}}
+{\footnotesize\ttfamily void top2\+And (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+compara os dois valores no topo da stack, segundo a operação \char`\"{}and\char`\"{}, parando se o primeiro for logo falso (isto é, tem shortcut), manipulando a stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+não retorna nada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a59afe69c42021b2ad8764c11f5db87a0}\label{stackFunc_8c_a59afe69c42021b2ad8764c11f5db87a0}} 
+\index{stackFunc.c@{stackFunc.c}!top2Greater@{top2Greater}}
+\index{top2Greater@{top2Greater}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{top2Greater()}{top2Greater()}}
+{\footnotesize\ttfamily void top2\+Greater (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+compara os dois valores no topo da stack e mantêm no topo apenas o maior, alterando o array 
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+não retorna nada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a1fb7764a7480eef414485da0eccef5df}\label{stackFunc_8c_a1fb7764a7480eef414485da0eccef5df}} 
+\index{stackFunc.c@{stackFunc.c}!top2Lower@{top2Lower}}
+\index{top2Lower@{top2Lower}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{top2Lower()}{top2Lower()}}
+{\footnotesize\ttfamily void top2\+Lower (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+compara os dois valores no topo da stack e mantêm no topo apenas o menor, alterando o array 
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+não retorna nada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_ac2f5d16ce80932383c77f549454ae6ea}\label{stackFunc_8c_ac2f5d16ce80932383c77f549454ae6ea}} 
+\index{stackFunc.c@{stackFunc.c}!top2Or@{top2Or}}
+\index{top2Or@{top2Or}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{top2Or()}{top2Or()}}
+{\footnotesize\ttfamily void top2\+Or (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+compara os dois valores no topo da stack, segundo a operação \char`\"{}or\char`\"{}, parando se o primeiro for logo verdade (isto é, tem shortcut), manipulando a stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+não retorna nada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a12cc9bb168202b412e1da37f6d0e58a8}\label{stackFunc_8c_a12cc9bb168202b412e1da37f6d0e58a8}} 
+\index{stackFunc.c@{stackFunc.c}!toString@{toString}}
+\index{toString@{toString}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily void to\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_adf962d49c92914a1590c0a2ea328773b}\label{stackFunc_8c_adf962d49c92914a1590c0a2ea328773b}} 
+\index{stackFunc.c@{stackFunc.c}!varListAssign@{varListAssign}}
+\index{varListAssign@{varListAssign}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{varListAssign()}{varListAssign()}}
+{\footnotesize\ttfamily void var\+List\+Assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_ac9abd6034351422690b27fc74826e216}{N\+O\+DE}}}]{var\+List }\end{DoxyParamCaption})}
+
+Função que inicializa as variáveis da stack com os seus valores pré-\/definidos 
+\begin{DoxyParams}{Parameters}
+{\em pointer} & para o array onde cada posição fixa corresponde a uma estrutrura relativa a uma variável \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stackFunc_8c_a15d6c402c1b81c245b8cc8b3d2f30bc8}\label{stackFunc_8c_a15d6c402c1b81c245b8cc8b3d2f30bc8}} 
+\index{stackFunc.c@{stackFunc.c}!whiteSpacer@{whiteSpacer}}
+\index{whiteSpacer@{whiteSpacer}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{whiteSpacer()}{whiteSpacer()}}
+{\footnotesize\ttfamily void white\+Spacer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stackFunc_8c_ac1e0657e030cc927b6404c5f993fbe31}\label{stackFunc_8c_ac1e0657e030cc927b6404c5f993fbe31}} 
+\index{stackFunc.c@{stackFunc.c}!xor@{xor}}
+\index{xor@{xor}!stackFunc.c@{stackFunc.c}}
+\doxysubsubsection{\texorpdfstring{xor()}{xor()}}
+{\footnotesize\ttfamily void xor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stackFunc_8h_a7112be6a0893b0b0c9742d47e8898f41}{S\+T\+A\+CK}}}]{stack }\end{DoxyParamCaption})}
+
+Bitwise xor entre 2 valores no topo da stack 
+\begin{DoxyParams}{Parameters}
+{\em stack} & onde executar operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

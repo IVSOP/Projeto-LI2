@@ -1,0 +1,1 @@
+[ "Luis" 10 ] :A ; [ "Filipa" 18 ] :B ; [ "Carla" 16 ] :C ; [ "Carlos" 15 ] :D ; [ "Andreia" 14 ] :E ; [ A B C D E ] :F 2 = S F 1 = S F 4 = S F ,
